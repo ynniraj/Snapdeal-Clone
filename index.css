@@ -265,6 +265,37 @@ body {
   height: 500px;
   background: whitesmoke;
 }
+
+#list3:hover .sublists {
+  position: absolute;
+  display: block;
+  margin-top: -134px;
+  z-index: 1;
+  margin-left: 203px;
+  width: 420%;
+  height: 500px;
+  background: whitesmoke;
+}
+#list4:hover .sublists {
+  position: absolute;
+  display: block;
+  margin-top: -182px;
+  z-index: 1;
+  margin-left: 203px;
+  width: 420%;
+  height: 500px;
+  background: whitesmoke;
+}
+#list5:hover .sublists {
+  position: absolute;
+  display: block;
+  margin-top: -230px;
+  z-index: 1;
+  margin-left: 203px;
+  width: 420%;
+  height: 500px;
+  background: whitesmoke;
+}
 #listimg img {
   width: 100%;
 }
@@ -440,9 +471,12 @@ body {
   font-size: 15px;
   padding: 4px;
 }
-<<<<<<< Updated upstream
-=======
 
+.stars span i {
+  font-size: 13px;
+  padding: 7px;
+  color: gold;
+}
 /* ------2nd phase--- */
 
 .trending {
@@ -738,4 +772,3 @@ body {
   margin-right: 9px;
   margin-left: 3px;
 }
->>>>>>> Stashed changes

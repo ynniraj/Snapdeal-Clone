@@ -22,18 +22,16 @@
       <h3>Sign Up</h3>
       <p>Create an account on snapdeal</p>
       <form id="form">
-        <div class="inputdiv">
-          <p id="mobilee"></p>
-          <input type="text" placeholder="Enter Your Mobile No" id="mobile" />
+        <p id="mobilee"></p>
+        <input type="text" placeholder="Enter Your Mobile No" id="mobile" />
 
-          <p id="emaill"></p>
-          <input
-            type="email"
-            placeholder="Enter Your Email"
-            id="Email"
-            name="Email"
-          />
-        </div>
+        <p id="emaill"></p>
+        <input
+          type="email"
+          placeholder="Enter Your Email"
+          id="Email"
+          name="Email"
+        />
 
         <br />
         <p id="namee"></p>
@@ -67,9 +65,9 @@
 </html>
 <script>
   document.querySelector("#button").addEventListener("click", signin);
-  var signupmobile=JSON.parse(localStorage.getItem("data"));
+  var signupmobile = JSON.parse(localStorage.getItem("data"));
   var details = JSON.parse(localStorage.getItem("signindataList")) || [];
-  document.querySelector("#mobile").value=signupmobile
+  document.querySelector("#mobile").value = signupmobile;
 
   function signin() {
     var Mobile = document.querySelector("#mobile").value;

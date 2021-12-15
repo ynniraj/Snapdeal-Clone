@@ -4,7 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f7f7f7;
+  font-family: "Lato", sans-serif;
+}
 #container {
+  background-color: white;
   width: 400px;
   margin: auto;
   border: 2px solid transparent;
@@ -42,7 +47,7 @@
 h2 {
   padding: 30px;
 }
-p {
+#container p {
   color: grey;
   font-size: 12px;
   margin-bottom: 25px;
@@ -64,7 +69,6 @@ p {
   padding-top: 5px;
   padding-right: 10px;
 }
-
 
 .topnav {
   background-color: #c7003d;

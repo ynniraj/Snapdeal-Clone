@@ -122,8 +122,7 @@ function slideLeft() {
 
 
 
-<<<<<<< Updated upstream
-=======
+
 // -----card2---
 
 // ---card sliders--
@@ -166,4 +165,3 @@ function productLists(products) {
 // =======signup===
 
 
->>>>>>> Stashed changes
