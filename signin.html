@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width:300px;
+            height:650px;
+            border:1px solid transparent;
+            margin:auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h3{
+            margin:30px
+        }
+        h5{
+            
+        color:gray;
+        margin-left: 110px; 
+        }
+    p{
+        font-size:10px;
+        color:gray;
+        margin-left: 40px;
+    }
+    form{
+        margin-left:30px
+    }
+    form>input{
+        height:25px;
+        width:220px;
+        border-radius:5px;
+        border:1px solid gray;
+        margin-left:10px
+    }
+    button{
+        width:250px;
+        height:40px;
+        margin:30px;
+        background-color:rgb(214, 49, 151);
+        color:white;
+        border:1px solid transparent;
+    
+    }
+    #facebook{
+        width:250px;
+        height:40px;
+        border:1px solid transparent;
+    }
+    #google{
+        width:250px;
+        height:70px;
+        border:1px solid transparent;
+    }
+    
+     span{
+         color:rgb(214, 49, 151);
+         font-size: 12px;
+         padding-left:15px
+     }
+     
+
+    
+    
+   
+       
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h3>Sign Up</h3>
+        <p>Create an account on snapdeal</p>
+        <form id="form">
+        <input type="text"  placeholder="" id="mobile">
+        <span id=mobilee></span>
+        <br> </br>
+        <input type="email"   placeholder="Email" id="Email" name="Email">
+        <span id=emaill></span>
+        <br> </br>
+        <input type="text"   placeholder="Name"  id="name"  >
+        <span id=namee></span>
+        <br> </br>
+        <input type="date"    placeholder="DOB" id="dob"  >
+        <span id=dobb></span>
+        <br> </br>
+        <input type="password"   placeholder="password" id="password">
+        <span id=passwordd></span>
+ 
+        </form>
+        <p>Password should have a minimum of 6 characters,at least 1 numeric and 1 alphabet</p>
+        <button id="button">Continue</button>
+        <h5>Or Login using</h5>
+        <div id ="face">
+        <form id="form1">
+            <input id = "facebook" typename="facebook" type="image" src="https://tse1.mm.bing.net/th?id=OIP.JfmT0k-jHFYxNCsKMkk1DgHaBo&pid=Api&P=0&w=492&h=108" height="50px" width="170px">
+            <input  id = "google" name="google" type="image" src="https://tse1.mm.bing.net/th?id=OIP.PS6XJ0tGDFn-s5u_8aiW2gHaCU&pid=Api&P=0&w=443&h=139" height="50px" width="170px">
+        
+    </form>
+</div>
+        
+    </div>
+    
+</body>
+</html>
+<script>
+   document.querySelector("#button").addEventListener("click",signin);
+   var signupmobile=JSON.parse(localStorage.getItem("data")) 
+   var details=JSON.parse(localStorage.getItem("signindata")) ||[]
+   document.querySelector("#mobile").value=signupmobile
+
+function signin(){
+   
+  var Mobile=  document.querySelector("#mobile").value
+  var Email=   document.querySelector("#Email").value
+  var Name=   document.querySelector("#name").value
+  var Dob=   document.querySelector("#dob").value
+  var Password=   document.querySelector("#password").value
+
+ if(Email!="" && Name!="" && Password!="" && Dob!="" && Mobile!==""){
+    var signindata={
+    mobile:Mobile,
+    Email:Email,
+    name:Name,
+    dob:Dob,
+    password:Password,
+}
+details.push(signindata)
+localStorage.setItem('signindata',JSON.stringify(details))
+window.location.href="otp.html"
+
+ }else{
+     if(Mobile==""){
+        document.querySelector("#mobilee").textContent = "please write mobile number!!!"
+     }
+    if(Email == ""){
+      document.querySelector("#emaill").textContent = "please write email!!!"
+  }
+  else{document.querySelector("#emaill").textContent = ""}  
+  
+  if(Name == ""){
+      document.querySelector("#namee").textContent = "please write Name !!!"
+  }
+  else{document.querySelector("#namee").textContent = ""}  
+  
+
+  if(Dob == ""){
+      document.querySelector("#dobb").textContent = "please fill dob!!!"
+  }
+  else{document.querySelector("#dobb").textContent = ""}  
+
+  if(Password == ""){
+      document.querySelector("#passwordd").textContent = "please write password!!!"
+  }
+  else{document.querySelector("#passwordd").textContent = ""}
+ }
+  
+}
+
+ 
+</script>
