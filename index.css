@@ -195,6 +195,7 @@ body {
   grid-area: l;
   background-color: white;
   margin: 0 24px 0 42px;
+  height: 126vh;
 }
 
 .topCat {
@@ -312,6 +313,28 @@ body {
   font-size: 12px;
   color: #666666;
   margin-right: 6px;
+}
+
+.barcode {
+  display: flex;
+  width: 180%;
+  margin-left: 30px;
+  margin-top: -10px;
+}
+.barcode img {
+  width: 30%;
+}
+.bartext p {
+  margin-top: 18px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.bartext h3 {
+  font-size: 10px;
+  padding-left: 10px;
+
+  color: #666666;
 }
 
 /* -------rightbox--- */
@@ -439,4 +462,102 @@ body {
 #slider p {
   font-size: 15px;
   padding: 4px;
+}
+
+/* ------2nd phase--- */
+
+.trending {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.trendhead h2 {
+  padding: 20px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.trenditems {
+  width: 87%;
+  padding: 27px 13px;
+  margin: 10px 0 10px 20px;
+  cursor: pointer;
+  background-color: white;
+}
+.trenditems:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.trenditems img {
+  width: 100%;
+}
+.trenditems p {
+  font-size: 15px;
+  color: #666666;
+  padding: 5px;
+}
+
+.trenditems span i {
+  font-size: 13px;
+  padding: 4px;
+  color: gold;
+}
+
+.pricetag {
+  display: flex;
+  padding: 5px;
+}
+.pricetag h5 {
+  text-decoration: line-through;
+  color: rgb(180, 176, 176);
+  padding: 3px;
+}
+.pricetag h4 {
+  padding-left: 5px;
+  color: #333333;
+}
+.pricetag p {
+  border: 1px solid rgb(180, 176, 176);
+  padding: 0px;
+  margin-left: 9px;
+}
+
+/* ----download snap--- */
+
+.downloadsnap {
+  width: 100%;
+  margin-top: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.downloadsnap img {
+  margin-right: 4%;
+}
+.snapText {
+  margin-top: 50px;
+}
+.snapText h5 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+.snapText p {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.snapText h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.snapText img {
+  margin-top: 14px;
+}
+#leaves {
+  position: absolute;
+  top: 0px;
+  right: -54px;
 }
