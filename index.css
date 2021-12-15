@@ -440,3 +440,302 @@ body {
   font-size: 15px;
   padding: 4px;
 }
+<<<<<<< Updated upstream
+=======
+
+/* ------2nd phase--- */
+
+.trending {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.trendhead h2 {
+  padding: 20px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.trenditems {
+  width: 87%;
+  padding: 27px 13px;
+  margin: 10px 0 10px 20px;
+  cursor: pointer;
+  background-color: white;
+}
+.trenditems:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.trenditems img {
+  width: 100%;
+}
+.trenditems p {
+  font-size: 15px;
+  color: #666666;
+  padding: 5px;
+}
+
+.trenditems span i {
+  font-size: 13px;
+  padding: 4px;
+  color: gold;
+}
+
+.pricetag {
+  display: flex;
+  padding: 5px;
+}
+.pricetag h5 {
+  text-decoration: line-through;
+  color: rgb(180, 176, 176);
+  padding: 3px;
+}
+.pricetag h4 {
+  padding-left: 5px;
+  color: #333333;
+}
+.pricetag p {
+  border: 1px solid rgb(180, 176, 176);
+  padding: 0px;
+  margin-left: 9px;
+}
+
+/* ----download snap--- */
+
+.downloadsnap {
+  width: 100%;
+  margin-top: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.downloadsnap img {
+  margin-right: 4%;
+}
+.snapText {
+  margin-top: 50px;
+}
+.snapText h5 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+.snapText p {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.snapText h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.snapText img {
+  margin-top: 14px;
+}
+#leaves {
+  position: absolute;
+  top: 0px;
+  right: -54px;
+}
+
+/* ------secure-- */
+
+.secure {
+  margin-top: 40px;
+  width: 100%;
+  background-color: white;
+  height: 200px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.cardsitems {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  margin: 0 100px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  align-items: center;
+}
+
+.cards h3 {
+  font-size: 18px;
+  color: #5a5a5a;
+  margin: 4px 0;
+  margin-top: 10px;
+}
+
+.cards p {
+  font-size: 12px;
+  color: #a4a3a3;
+  margin: 2px 0;
+}
+
+/* ---footer1--- */
+
+.footer1 {
+  width: 100%;
+  background-color: white;
+  height: 40vh;
+}
+
+.footCard {
+  display: flex;
+  justify-content: center;
+}
+.footitems {
+  margin: 40px 10px 0 30px;
+}
+.footitems h3 {
+  font-size: 14px;
+  color: #344c55;
+}
+.footitems p {
+  font-size: 12px;
+  padding-top: 14px;
+  color: #a5a5a5;
+}
+
+.footitems input {
+  font-size: 13px;
+  color: #999;
+  border: none;
+  border-radius: 2.9px;
+  background-color: #f7f8fa;
+  height: 37.5px;
+  margin-top: 12px;
+}
+.footitems input:placeholder-shown {
+  padding-left: 10px;
+}
+
+.footitems button {
+  height: 38px;
+  font-size: 12px;
+  padding: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-color: #333;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.footitems span {
+  color: #25a8ed;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ----payment-- */
+
+.payments {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.pay h2 {
+  font-size: 14px;
+}
+.social h2 {
+  font-size: 14px;
+}
+
+.icons {
+  font-size: 28px;
+  cursor: pointer;
+}
+.icons i {
+  padding-right: 16px;
+  padding-top: 10px;
+}
+
+.fa-facebook {
+  color: blue;
+}
+.fa-twitter {
+  color: blue;
+}
+.fa-youtube {
+  color: red;
+}
+.fa-instagram {
+  color: red;
+}
+.fa-pinterest {
+  color: red;
+}
+
+.fa-cc-mastercard {
+  color: #25a8ed;
+}
+.fa-cc-visa {
+  color: lightskyblue;
+}
+.fa-cc-paypal {
+  color: blue;
+}
+.fa-cc-apple-pay {
+  color: red;
+}
+.fa-cc-amex {
+  color: black;
+}
+/* ---about--- */
+
+.about {
+  width: 100%;
+  padding: 40px;
+}
+.about h2 {
+  font-size: 18px;
+  color: #344c55;
+  font-weight: bold;
+}
+.about p {
+  font-size: 14px;
+  color: #777;
+  line-height: 24px;
+  word-spacing: 1px;
+  margin-top: 15px;
+}
+
+/* ---copy */
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 18px 28px 18px 28px;
+}
+.copyright h2 {
+  color: #666666;
+  font-size: 12px;
+}
+.copyright h3 {
+  font-size: 12px;
+  color: #666;
+}
+
+.copyright h3 i {
+  color: #fd4b4b;
+  padding-left: 4px;
+  font-size: 16px;
+  margin-right: 9px;
+  margin-left: 3px;
+}
+>>>>>>> Stashed changes

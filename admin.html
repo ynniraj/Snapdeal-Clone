@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .container {
+        width: 50%;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      label {
+        font-size: 20px;
+      }
+
+      a {
+        width: 50%;
+        font-size: 30px;
+        color: blue;
+        text-decoration: none;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Admin Page</h1>
+    <div class="container">
+      <form id="form">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter name" /> <br />
+
+        <label>MRP</label>
+        <input type="number" id="mrp" placeholder="Enter Price" /> <br />
+
+        <label>price</label>
+        <input type="number" id="price" placeholder="Enter Price" /> <br />
+
+        <label>Discount</label>
+        <input type="number" id="dis" placeholder="Enter Price" /> <br />
+
+        <label>Img</label>
+        <input type="text" id="img" placeholder="Enter Img" /> <br />
+        <input type="submit" />
+      </form>
+    </div>
+    <a href="index.html">Go To Products Page</a>
+  </body>
+</html>
+
+<script>
+  document.querySelector("#form").addEventListener("submit", addItems);
+  var arr = JSON.parse(localStorage.getItem("snapdeal")) || [];
+
+  function addItems(event) {
+    event.preventDefault();
+    var name = document.querySelector("#name").value;
+    var mrp = document.querySelector("#mrp").value;
+    var price = document.querySelector("#price").value;
+    var discount = document.querySelector("#dis").value;
+    var img = document.querySelector("#img").value;
+
+    var prodItems = {
+      name: name,
+      mrp: mrp,
+      price: price,
+      discount: discount,
+      img: img,
+    };
+
+    arr.push(prodItems);
+    localStorage.setItem("snapdeal", JSON.stringify(arr));
+  }
+</script>

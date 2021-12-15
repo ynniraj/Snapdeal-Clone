@@ -122,3 +122,48 @@ function slideLeft() {
 
 
 
+<<<<<<< Updated upstream
+=======
+// -----card2---
+
+// ---card sliders--
+var products = JSON.parse(localStorage.getItem("snapdeal")) || [];
+
+productLists(products);
+
+function productLists(products) {
+    document.querySelector(".trending").textContent = "";
+
+    products.map(function (elem) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "trenditems");
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.img);
+
+        var p = document.createElement("p");
+        p.textContent = elem.name;
+        var span = document.createElement("span");
+        span.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>';
+
+        var div2 = document.createElement("div")
+        div2.setAttribute("class", "pricetag");
+
+
+        var mrp = document.createElement("h5");
+        mrp.textContent = "RS " + elem.mrp;
+        var price = document.createElement("h4");
+        price.textContent = "Rs " + elem.price;
+        var dis = document.createElement("p");
+        dis.textContent = elem.discount + "% Off";
+
+        div2.append(mrp, price, dis)
+        div.append(img, p, span, div2);
+        document.querySelector(".trending").append(div);
+    });
+}
+
+
+// =======signup===
+
+
+>>>>>>> Stashed changes
