@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -114,3 +115,115 @@
     }
   }
 </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+        #container{
+            width:400px;
+            height:400px;
+            margin:auto;
+            border:2px solid transparent;
+            font-family: sans-serif;
+            text-align:center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+            
+            
+        }
+        #x{
+            margin-left: 350px;
+            border:1px solid transparent;
+            color:gray;
+        }
+        #searchbar{
+            width:300px;
+            height:35px;
+            margin-left:10px;
+            border-radius:5px;
+            border:1px solid gray
+        }
+        #button{
+            width:340px;
+            height:45px;
+            margin-left:10px;
+            border-radius:5px;
+            margin-top:35px;
+            background-color:rgb(214, 49, 151);
+            color:white;
+            font-size:15px;
+            font-family:sans-serif;
+            border:1px solid transparent;
+        }
+    p{
+        color: grey;
+        font-size:12px
+    }
+    
+    
+    #form{
+        
+        display:flex;
+        margin-left: 20px;
+        border:1px solid transparent
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <button id="x">x</button>
+        <h2>Login/Sign Up On Snapdeal</h2>
+        
+        <p>Please Provide your Mobile Number or EMail to Login/Sign Up on Snapdeal</p>
+        <br> </br>
+        <input type="text" id="searchbar" placeholder="Mobile Number/ Email">
+        <button id="button">continue</button> 
+        <br> </br>
+        
+        <p>or Login Using</p>
+        
+        <form id="form">
+            <input name="facebook" type="image" src="https://tse1.mm.bing.net/th?id=OIP.JfmT0k-jHFYxNCsKMkk1DgHaBo&pid=Api&P=0&w=492&h=108" height="50px" width="170px">
+            <input name="google" type="image" src="https://tse1.mm.bing.net/th?id=OIP.PS6XJ0tGDFn-s5u_8aiW2gHaCU&pid=Api&P=0&w=443&h=139" height="50px" width="200px">
+        
+    </form>
+    
+    </div>
+
+    
+</body>
+</html>
+<script>
+    document.querySelector("#button").addEventListener("click",button)
+   
+    
+    function button(){
+    var content = document.querySelector("#searchbar").value
+    var item= JSON.parse(localStorage.getItem("signindata")) ||[]
+    var boolean=false;
+
+    item.map(function(element){
+        if( content==element.mobile){
+            boolean=true;
+       }
+    })
+    if(boolean){
+           window.location.href="otp.html"
+       }else{
+        localStorage.setItem("data",content)
+        window.location.href="signin.html"
+       }
+    }
+
+    
+    
+    
+</script>
+

@@ -162,6 +162,4 @@ function productLists(products) {
 }
 
 
-// =======signup===
-
 
