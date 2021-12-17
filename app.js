@@ -122,6 +122,7 @@ function slideLeft() {
 
 
 
+
 // -----card2---
 
 // ---card sliders--
@@ -159,5 +160,6 @@ function productLists(products) {
         document.querySelector(".trending").append(div);
     });
 }
+
 
 

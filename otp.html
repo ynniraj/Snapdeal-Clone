@@ -1,5 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      #container {
+        height: 400px;
+        width: 400px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      button {
+        margin-top: 20px;
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgb(214, 49, 151);
+        color: white;
+        border: 1px solid transparent;
+      }
+      #OTP {
+        width: 80px;
+        height: 20px;
+        border-radius: 5px;
+        text-align: center;
+        border: 1px solid lightgray;
+      }
+      h3 {
+        font-family: sans-serif;
+      }
+      p {
+        font-family: sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h3>Login On Snapdeal</h3>
+
+      <div id="box">
+        <i
+          class="fa fa-lock"
+          aria-hidden="true"
+          style="font-size: 90px; color: rgb(214, 49, 151)"
+        ></i>
+      </div>
+      <p>Please enter verification code(OTP) sent to:</p>
+      <p>Resend OTP</p>
+      <input id="OTP" type="password" name="OTP" placeholder="code" />
+      <button id="button">continue</button>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("#button").addEventListener("click", OTP);
+  window.onload = function () {
+    alert("Your OTP Is 1234");
+  };
+  function OTP() {
+    var input = document.querySelector("#OTP").value;
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,6 +138,7 @@
     function OTP(){
 
         var input = document.querySelector("#OTP").value;
+
     if (input == "1234") {
       alert("LogIn SuccessFull");
       window.location.href = "index.html";
