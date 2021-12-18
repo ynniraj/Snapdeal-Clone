@@ -60,6 +60,7 @@
 </html>
 <script>
     document.querySelector("#button").addEventListener("click", OTP)
+    var login_boolean=false;
     window.onload = function(){ 
                 alert("your otp is 1234");
                 }
@@ -68,9 +69,12 @@
         var input = document.querySelector("#OTP").value;
     if (input == "1234") {
       alert("LogIn SuccessFull");
+      login_boolean=true
       window.location.href = "index.html";
     } else {
+        login_boolean=false;
       alert("Wrong OTP");
     }
+    localStorage.setItem("login_boolean",login_boolean)
   }
 </script>

@@ -112,7 +112,7 @@
    var signupmobile=JSON.parse(localStorage.getItem("data")) 
    var details=JSON.parse(localStorage.getItem("signindata")) ||[]
    document.querySelector("#mobile").value=signupmobile
-
+    var userData={}
 function signin(){
    
   var Mobile=  document.querySelector("#mobile").value
@@ -130,8 +130,10 @@ function signin(){
     password:Password,
 }
 details.push(signindata)
+localStorage.setItem('userdata',JSON.stringify(signindata))
 localStorage.setItem('signindata',JSON.stringify(details))
 window.location.href="otp.html"
+console.log(signindata)
 
  }else{
      if(Mobile==""){
