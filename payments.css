@@ -495,6 +495,14 @@ footer {
   color: white;
   cursor: pointer;
 }
+.pay-amout-button > a > button {
+  background-color: #e40046;
+  width: 50%;
+  padding: 2.5%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 .credit-card-footer {
   padding: 2%;
 }
