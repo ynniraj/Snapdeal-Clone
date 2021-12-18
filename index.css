@@ -195,6 +195,7 @@ body {
   grid-area: l;
   background-color: white;
   margin: 0 24px 0 42px;
+  height: 126vh;
 }
 
 .topCat {
@@ -345,6 +346,28 @@ body {
   margin-right: 6px;
 }
 
+.barcode {
+  display: flex;
+  width: 180%;
+  margin-left: 30px;
+  margin-top: -10px;
+}
+.barcode img {
+  width: 30%;
+}
+.bartext p {
+  margin-top: 18px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.bartext h3 {
+  font-size: 10px;
+  padding-left: 10px;
+
+  color: #666666;
+}
+
 /* -------rightbox--- */
 .rightside {
   grid-area: r;
@@ -477,6 +500,7 @@ body {
   padding: 7px;
   color: gold;
 }
+
 /* ------2nd phase--- */
 
 .trending {

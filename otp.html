@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -64,14 +65,16 @@
     </div>
   </body>
 </html>
+
 <script>
-  document.querySelector("#button").addEventListener("click", OTP);
-  var login_boolean = false;
-  window.onload = function () {
-    alert("your otp is 1234");
-  };
-  function OTP() {
-    var input = document.querySelector("#OTP").value;
+    document.querySelector("#button").addEventListener("click", OTP)
+    window.onload = function(){ 
+                alert("your otp is 1234");
+                }
+    function OTP(){
+
+        var input = document.querySelector("#OTP").value;
+
     if (input == "1234") {
       alert("LogIn SuccessFull");
       login_boolean = true;
