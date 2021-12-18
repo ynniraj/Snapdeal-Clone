@@ -163,3 +163,21 @@ function productLists(products) {
 
 
 
+// =======signup===
+
+
+var item = JSON.parse(localStorage.getItem("userdata"))
+//   document.querySelector("#user_name").value = item.name
+var login_boolean = JSON.parse(localStorage.getItem("login_boolean"))
+if (login_boolean) {
+    document.getElementById("user_name").textContent = item.name
+} else {
+    // <a href="" id="user_name">Sign In <i class="fas fa-user-circle"></i></a>
+}
+
+    //   function namesignin(element){
+    //   element.preventDefault();
+
+    //   }
+
+
