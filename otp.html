@@ -25,7 +25,8 @@
         width: 300px;
         height: 40px;
         border-radius: 5px;
-        background-color: rgb(214, 49, 151);
+        background-color: #e40046;
+        cursor: pointer;
         color: white;
         border: 1px solid transparent;
       }
@@ -48,33 +49,37 @@
   <body>
     <div id="container">
       <h3>Login On Snapdeal</h3>
-
       <div id="box">
         <i
           class="fa fa-lock"
           aria-hidden="true"
-          style="font-size: 90px; color: rgb(214, 49, 151)"
+          style="font-size: 90px; color: #e40046"
         ></i>
       </div>
       <p>Please enter verification code(OTP) sent to:</p>
       <p>Resend OTP</p>
       <input id="OTP" type="password" name="OTP" placeholder="code" />
-      <button id="button">continue</button>
+
+      <button id="button">CONTINUE</button>
     </div>
   </body>
 </html>
 <script>
   document.querySelector("#button").addEventListener("click", OTP);
+  var login_boolean = false;
   window.onload = function () {
-    alert("Your OTP Is 1234");
+    alert("your otp is 1234");
   };
   function OTP() {
     var input = document.querySelector("#OTP").value;
     if (input == "1234") {
       alert("LogIn SuccessFull");
+      login_boolean = true;
       window.location.href = "index.html";
     } else {
+      login_boolean = false;
       alert("Wrong OTP");
     }
+    localStorage.setItem("login_boolean", login_boolean);
   }
 </script>

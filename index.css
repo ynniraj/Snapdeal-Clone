@@ -568,6 +568,7 @@ body {
 
 .snapText img {
   margin-top: 14px;
+  cursor: pointer;
 }
 #leaves {
   position: absolute;
@@ -636,6 +637,10 @@ body {
   font-size: 12px;
   padding-top: 14px;
   color: #a5a5a5;
+  cursor: pointer;
+}
+.footitems p:hover {
+  text-decoration: underline;
 }
 
 .footitems input {

@@ -96,18 +96,16 @@
 
   function button() {
     var content = document.querySelector("#searchbar").value;
-    var item = JSON.parse(localStorage.getItem("signindataList")) || [];
+    var item = JSON.parse(localStorage.getItem("signindata")) || [];
     var boolean = false;
 
     item.map(function (element) {
-      if (content == element.mobile || content == element.Email) {
+      if (content == element.mobile) {
         boolean = true;
       }
     });
     if (boolean) {
       window.location.href = "otp.html";
-    } else if (content == "admin") {
-      window.location.href = "admin.html";
     } else {
       localStorage.setItem("data", content);
       window.location.href = "signin.html";

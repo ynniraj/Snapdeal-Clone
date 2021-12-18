@@ -66,9 +66,9 @@
 <script>
   document.querySelector("#button").addEventListener("click", signin);
   var signupmobile = JSON.parse(localStorage.getItem("data"));
-  var details = JSON.parse(localStorage.getItem("signindataList")) || [];
+  var details = JSON.parse(localStorage.getItem("signindata")) || [];
   document.querySelector("#mobile").value = signupmobile;
-
+  var userData = {};
   function signin() {
     var Mobile = document.querySelector("#mobile").value;
     var Email = document.querySelector("#Email").value;
@@ -91,34 +91,36 @@
         password: Password,
       };
       details.push(signindata);
-      localStorage.setItem("signindataList", JSON.stringify(details));
+      localStorage.setItem("userdata", JSON.stringify(signindata));
+      localStorage.setItem("signindata", JSON.stringify(details));
       window.location.href = "otp.html";
+      console.log(signindata);
     } else {
       if (Mobile == "") {
         document.querySelector("#mobilee").textContent =
-          "Enter Valid Mobile No";
+          "please write mobile number!!!";
       }
       if (Email == "") {
-        document.querySelector("#emaill").textContent = "Enter Valid Email";
+        document.querySelector("#emaill").textContent = "please write email!!!";
       } else {
         document.querySelector("#emaill").textContent = "";
       }
 
       if (Name == "") {
-        document.querySelector("#namee").textContent = "Enter Valid Name";
+        document.querySelector("#namee").textContent = "please write Name !!!";
       } else {
         document.querySelector("#namee").textContent = "";
       }
 
       if (Dob == "") {
-        document.querySelector("#dobb").textContent = "Enter Valid DOB";
+        document.querySelector("#dobb").textContent = "please fill dob!!!";
       } else {
         document.querySelector("#dobb").textContent = "";
       }
 
       if (Password == "") {
         document.querySelector("#passwordd").textContent =
-          "Enter valid password";
+          "please write password!!!";
       } else {
         document.querySelector("#passwordd").textContent = "";
       }

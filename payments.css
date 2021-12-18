@@ -1,0 +1,585 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: whitesmoke;
+}
+
+#payment-protection {
+  background-color: #e40046;
+  justify-content: space-evenly;
+  display: flex;
+  height: 96px;
+  padding: 0px;
+}
+#logo {
+  padding-top: 20px;
+  padding-right: 350px;
+}
+#payment-protection > p {
+  padding-top: 24px;
+  color: white;
+}
+
+/* .pop-up-body-rightside{
+        background-color: red;
+        width: 30%;
+    } */
+.pop-up-body {
+  background-color: #ffffff;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid;
+  margin-top: -30px;
+  /* position: absolute; */
+  /* margin-left: 200px; */
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 80%;
+  /* place-content: center; */
+}
+
+/* .pop-up-body>div:nth-child(1){
+       display: grid;
+       grid-template-rows: 70px 200px;
+       
+    } */
+/* .pop-up-body>div:nth-child(2){
+        height: 550px;
+    } */
+.pop-up-body > div:nth-child(3) {
+  height: 550px;
+}
+/* .pop-up-body>div:nth-child(4){
+        height: 800px;
+    } */
+
+.user-log-in {
+  display: grid;
+  grid-template-rows: 70px 0px;
+  grid-gap: 0px;
+  margin-bottom: 10px;
+}
+
+.login-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-left: 20px;
+  background-color: #333333;
+  color: white;
+}
+.login-top h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-right: 40%;
+}
+
+.login-bottom {
+  display: grid;
+  height: 0px;
+  grid-template-rows: repeat(3, 50px);
+  padding: 20px;
+  visibility: hidden;
+}
+.login-top.active + .login-bottom {
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+  padding: 20px;
+  position: relative;
+  transition: 00.2s;
+  visibility: visible;
+  line-height: 30px;
+}
+.login-bottom p {
+  font-size: 18px;
+  padding: 10px;
+}
+.login-bottom h2 {
+  font-size: 17px;
+  color: #666;
+}
+#loginAsEmail {
+  color: #e40046;
+}
+.login-bottom > button {
+  padding: 12px;
+  background-color: #e40046;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* 4444444444444444444444444444444444 */
+.user-addres {
+  display: grid;
+  grid-template-rows: 70px 0px;
+  grid-gap: 0px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.user-addres h2 {
+  font-size: 15px;
+  /* text-transform: uppercase; */
+  margin-right: 20%;
+}
+
+td {
+  padding-left: 40px;
+  padding-top: 5px;
+}
+.address input {
+  padding: 5px;
+}
+.address label {
+  color: #666;
+}
+.address button {
+  margin-left: 30%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e40046;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.addresshead h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-right: 26%;
+}
+.user-address-bottom {
+  display: grid;
+  padding: 20px;
+  height: 450px;
+  grid-template-areas:
+    "a a a a . . . . . . . . "
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    ". . . . . b b . . . . .";
+  visibility: hidden;
+}
+/* 333333333333333333333rd step */
+.login-top.active + .user-address-bottom {
+  display: grid;
+  height: 450px;
+  grid-template-areas:
+    "a a a a . . . . . . . . "
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    "a a a a . . . . . . . ."
+    ". . . . . b b . . . . .";
+  padding: 20px;
+  /* position: relative; */
+  transition: 00.2s;
+  visibility: visible;
+}
+.user-address-bottom > div {
+  grid-area: a;
+}
+.user-address-bottom > button {
+  grid-area: b;
+}
+
+.user-product-details {
+  display: grid;
+  grid-template-rows: 70px repeat(2, 1fr);
+  grid-gap: 10px;
+  height: 550px;
+}
+.user-product-datails-bottom {
+  display: grid;
+  padding: 0px 0px;
+  grid-gap: 10px;
+  grid-template-rows: 70px repeat(2, 1fr);
+  height: 450px;
+}
+/* 33333333333333333333333333333333 */
+.login-top.active + .user-product-datails-bottom {
+  display: grid;
+  padding: 0px 0px;
+  grid-gap: 0px;
+  grid-template-rows: 70px repeat(2, 30%);
+  position: relative;
+  height: 550;
+  transition: 000.2s;
+  visibility: visible;
+}
+.user-product-datails-bottom > .title-head {
+  background-color: brown;
+  display: grid;
+  grid-gap: 5px;
+  height: 50px;
+  grid-template-areas: "c . . . d . e . . . f";
+  align-items: center;
+  padding: 10px;
+}
+/* 555555555555555555555 */
+.login-top.active .user-product-datails-bottom > .title-head {
+  background-color: brown;
+  display: grid;
+  grid-gap: 5px;
+  padding: 0px 20px;
+  grid-template-areas: "c . . . d . e . . . f";
+  align-items: center;
+  padding: 10px;
+}
+.user-product-datails-bottom > .title-head > div:nth-child(1) {
+  grid-area: c;
+}
+.user-product-datails-bottom > .title-head > div:nth-child(2) {
+  grid-area: d;
+}
+.user-product-datails-bottom > .title-head > div:nth-child(3) {
+  grid-area: e;
+}
+.user-product-datails-bottom > .title-head > div:nth-child(4) {
+  grid-area: f;
+}
+.user-product-datails-bottom > .user-product-datails-bottom-2nd-chiled {
+  background-color: white;
+}
+
+.items-head {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "id id id id iq iq ie ie is is";
+  background: whitesmoke;
+  align-items: center;
+  height: 50px;
+  margin-top: 12px;
+}
+.idetail {
+  grid-area: id;
+}
+.iquan {
+  grid-area: iq;
+}
+.ideli {
+  grid-area: ie;
+}
+.isub {
+  grid-area: is;
+}
+.cartItems {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "i i i i q q e e t t";
+  margin-top: 10px;
+}
+.itemsList {
+  grid-area: i;
+}
+.qty {
+  grid-area: q;
+}
+.expDel {
+  grid-area: e;
+}
+.carttotal {
+  grid-area: t;
+}
+.items {
+  display: flex;
+  padding: 5px;
+}
+
+.items img {
+  width: 21%;
+}
+.items p {
+  padding-left: 6px;
+  font-size: 14px;
+}
+.itemsList h3 {
+  text-align: center;
+  margin-top: -10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.itemsList i {
+  padding-right: 6px;
+}
+
+.qty select {
+  outline: none;
+  padding: 6px;
+}
+
+.login-top.active
+  + .user-product-datails-bottom
+  > .user-product-datails-bottom-2nd-chiled {
+  background-color: white;
+  display: grid;
+  grid-gap: 5px;
+  padding: 0px 20px;
+  grid-template-columns: repeat(2, 1fr);
+  height: 170px;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.user-product-datails-bottom > .user-product-datails-bottom-3nd-chiled {
+  background-color: brown;
+  display: grid;
+  grid-gap: 5px;
+
+  padding: 0px 20px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.login-top.active
+  + .user-product-datails-bottom
+  > .user-product-datails-bottom-3nd-chiled {
+  background-color: brown;
+  display: grid;
+  grid-gap: 5px;
+  padding: 0px 20px;
+  height: 170px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-bottom: 15px;
+}
+.payment-details {
+  display: grid;
+  grid-template-rows: 70px 0px;
+  grid-gap: 0px;
+  margin-bottom: 15px;
+}
+
+.payment-details > div {
+  /* background-color: aqua; */
+  padding: 20px;
+}
+
+/* this is imp for me */
+.payments h2 {
+  font-size: 16px;
+  margin-right: 26%;
+}
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 27%;
+  height: 500px;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 15px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.tab button:hover {
+  background-color: rgb(236, 230, 230);
+}
+
+.tab button.active {
+  background-color: white;
+  border-left: 4px solid #e40046;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: none;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-left: none;
+  height: 0px;
+}
+
+.credit-div-body {
+  height: 60%;
+}
+
+.credit-card-head {
+  font-size: 15px;
+  padding: 10px;
+}
+.credit-card-body {
+  width: 74%;
+  padding: 2%;
+  font-size: 14px;
+}
+.card-number-input {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0%;
+}
+.card-number-input h3 {
+  font-size: 16px;
+  margin-top: 6px;
+}
+.expiry-date {
+  display: flex;
+  justify-content: space-around;
+  margin: 5% 0%;
+}
+.expiry-date h3 {
+  font-size: 14px;
+  margin-top: 2px;
+}
+.four-inputs {
+  display: flex;
+  justify-content: space-around;
+}
+.four-inputs > .mm,
+.yy,
+.cvv {
+  width: 18%;
+  padding-top: 0%;
+  padding: 2px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.slash {
+  font-weight: bold;
+}
+.quation-mark {
+  border: 1px solid blue;
+  width: 5%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: blue;
+  font-weight: bold;
+}
+.cardnumber {
+  width: 62%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 3px;
+}
+.saving-card-details {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.saving-card-details > .quation-mark {
+  width: 1%;
+}
+
+footer {
+  font-size: 12px;
+}
+.pay-amout-button > button {
+  background-color: #e40046;
+  width: 50%;
+  padding: 2.5%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.credit-card-footer {
+  padding: 2%;
+}
+.bank-offer-for-makepayment {
+  height: 40%;
+}
+.display-flex-net-banking {
+  display: flex;
+  justify-content: space-between;
+}
+.display-flex-net-banking > select {
+  width: 50%;
+  padding: 1%;
+  height: 40%;
+}
+
+.padding-emi > select {
+  margin-top: 3%;
+  width: 30%;
+}
+.bank-offer-for-makepayment {
+  height: 100%;
+  display: flex;
+  border: 1px solid gray;
+  padding: 2%;
+  justify-content: space-between;
+}
+.bank-offer-for-makepayment > div:nth-child(2) {
+  padding-top: 20px;
+}
+/* this is imp for me */
+
+.payment-details-saved-cards-part {
+  display: grid;
+  font-size: 15px;
+  grid-template-columns: 150px repeat(2, 300px);
+  grid-template-rows: repeat(3, 170px);
+  /* border: 2px solid red;      */
+  padding: 10px;
+  grid-gap: 20px;
+  visibility: hidden;
+}
+.payment-details-saved-cards-part > div:nth-child(1) {
+  /* background-color: yellow; */
+  width: 100%;
+  grid-area: 1/1/3/2;
+  visibility: hidden;
+}
+.payment-details-saved-cards-part > div:nth-child(2) {
+  grid-area: 1/2/2/4;
+  visibility: hidden;
+}
+.payment-details-saved-cards-part > div:nth-child(3) {
+  grid-area: 2/2/4/4;
+  background-color: blue;
+  visibility: hidden;
+}
+.login-top.active + .payment-details-saved-cards-part {
+  display: grid;
+  font-size: 15px;
+  grid-template-columns: 150px repeat(2, 300px);
+  grid-template-rows: repeat(3, 170px);
+  /* border: 2px solid red;      */
+  padding: 10px;
+  grid-gap: 20px;
+  height: 600px;
+  visibility: visible;
+}
+.login-top.active + .payment-details-saved-cards-part > div:nth-child(1) {
+  width: 23%;
+  height: 90%;
+  grid-area: 1/1/4/2;
+  visibility: visible;
+}
+.login-top.active + .payment-details-saved-cards-part > div:nth-child(2) {
+  grid-area: 1/2/2/4;
+  height: 30%;
+  margin-left: 25%;
+  visibility: visible;
+}
+.login-top.active + .payment-details-saved-cards-part > div:nth-child(3) {
+  grid-area: 2/2/4/4;
+  height: 64%;
+  width: 75%;
+  margin-left: 25%;
+  background-color: blue;
+  visibility: visible;
+}
