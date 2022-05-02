@@ -801,3 +801,6 @@ body {
   margin-right: 9px;
   margin-left: 3px;
 }
+a {
+  text-decoration: none;
+}
