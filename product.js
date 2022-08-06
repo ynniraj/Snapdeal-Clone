@@ -121,7 +121,7 @@ var arr = [
       div.append(img,name,div2,div3);
       document.querySelector(".prod").append(div);
       div.addEventListener("click",function(){
-        window.location.href=elem.link;
+        window.location.href="snapdeal4.html";
       });
     });
   }
