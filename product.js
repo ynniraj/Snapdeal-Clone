@@ -92,34 +92,39 @@ var arr = [
 
   localStorage.setItem("products",JSON.stringify(arr));
 
-  arr.map(function(elem){
-    var div = document.createElement("div");
-    var img = document.createElement("img");
-    img.setAttribute("src",elem.img);
-    var name = document.createElement("div");
-    name.textContent=elem.name;
-    var div2 = document.createElement("div");
-    div2.setAttribute("class","div2")
-    var mrp = document.createElement("p");
-    mrp.textContent="Rs."+elem.mrp;
-    var price=document.createElement("p");
-    price.textContent="Rs."+elem.price;
-    var discount=document.createElement("p");
-    discount.textContent=elem.discount+"% Off";
-    div2.append(mrp,price,discount);
-    var div3=document.createElement("div");
-    div3.setAttribute("class","div3");
-    var color = document.createElement("p");
-    color.textContent="Color";
-    var d1 = document.createElement("div");
-    var d2 = document.createElement("div");
-    div3.append(color,d1,d2);
-    div.append(img,name,div2,div3);
-    document.querySelector(".prod").append(div);
-    div.addEventListener("click",function(){
-      window.location.href=elem.link;
+  append(arr);
+
+  function append(arr){
+    document.querySelector(".prod").innerHTML="";
+    arr.map(function(elem){
+      var div = document.createElement("div");
+      var img = document.createElement("img");
+      img.setAttribute("src",elem.img);
+      var name = document.createElement("div");
+      name.textContent=elem.name;
+      var div2 = document.createElement("div");
+      div2.setAttribute("class","div2")
+      var mrp = document.createElement("p");
+      mrp.textContent="Rs."+elem.mrp;
+      var price=document.createElement("p");
+      price.textContent="Rs."+elem.price;
+      var discount=document.createElement("p");
+      discount.textContent=elem.discount+"% Off";
+      div2.append(mrp,price,discount);
+      var div3=document.createElement("div");
+      div3.setAttribute("class","div3");
+      var color = document.createElement("p");
+      color.textContent="Color";
+      var d1 = document.createElement("div");
+      var d2 = document.createElement("div");
+      div3.append(color,d1,d2);
+      div.append(img,name,div2,div3);
+      document.querySelector(".prod").append(div);
+      div.addEventListener("click",function(){
+        window.location.href=elem.link;
+      });
     });
-  });
+  }
   
   function filter(){
     var select = document.querySelector(".sortby").value;
@@ -129,35 +134,7 @@ var arr = [
         return a.price-b.price;
       });
       
-      document.querySelector(".prod").innerHTML="";
-      arr.map(function(elem){
-        var div = document.createElement("div");
-        var img = document.createElement("img");
-        img.setAttribute("src",elem.img);
-        var name = document.createElement("div");
-        name.textContent=elem.name;
-        var div2 = document.createElement("div");
-        div2.setAttribute("class","div2")
-        var mrp = document.createElement("p");
-        mrp.textContent="Rs."+elem.mrp;
-        var price=document.createElement("p");
-        price.textContent="Rs."+elem.price;
-        var discount=document.createElement("p");
-        discount.textContent=elem.discount+"% Off";
-        div2.append(mrp,price,discount);
-        var div3=document.createElement("div");
-        div3.setAttribute("class","div3");
-        var color = document.createElement("p");
-        color.textContent="Color";
-        var d1 = document.createElement("div");
-        var d2 = document.createElement("div");
-        div3.append(color,d1,d2);
-        div.append(img,name,div2,div3);
-        document.querySelector(".prod").append(div);
-        div.addEventListener("click",function(){
-          window.location.href=elem.link;
-        });
-  });
+      append(arr);
     }
 
     if(select=="high"){
@@ -165,35 +142,7 @@ var arr = [
         return b.price-a.price;
       });
       
-      document.querySelector(".prod").innerHTML="";
-      arr.map(function(elem){
-        var div = document.createElement("div");
-        var img = document.createElement("img");
-        img.setAttribute("src",elem.img);
-        var name = document.createElement("div");
-        name.textContent=elem.name;
-        var div2 = document.createElement("div");
-        div2.setAttribute("class","div2")
-        var mrp = document.createElement("p");
-        mrp.textContent="Rs."+elem.mrp;
-        var price=document.createElement("p");
-        price.textContent="Rs."+elem.price;
-        var discount=document.createElement("p");
-        discount.textContent=elem.discount+"% Off";
-        div2.append(mrp,price,discount);
-        var div3=document.createElement("div");
-        div3.setAttribute("class","div3");
-        var color = document.createElement("p");
-        color.textContent="Color";
-        var d1 = document.createElement("div");
-        var d2 = document.createElement("div");
-        div3.append(color,d1,d2);
-        div.append(img,name,div2,div3);
-        document.querySelector(".prod").append(div);
-        div.addEventListener("click",function(){
-          window.location.href=elem.link;
-        });
-      });
+      append(arr);
     }
 
     if(select=="discount"){
@@ -201,48 +150,13 @@ var arr = [
         return b.discount-a.discount;
       });
       
-      document.querySelector(".prod").innerHTML="";
-      arr.map(function(elem){
-        var div = document.createElement("div");
-        var img = document.createElement("img");
-        img.setAttribute("src",elem.img);
-        var name = document.createElement("div");
-        name.textContent=elem.name;
-        var div2 = document.createElement("div");
-        div2.setAttribute("class","div2")
-        var mrp = document.createElement("p");
-        mrp.textContent="Rs."+elem.mrp;
-        var price=document.createElement("p");
-        price.textContent="Rs."+elem.price;
-        var discount=document.createElement("p");
-        discount.textContent=elem.discount+"% Off";
-        div2.append(mrp,price,discount);
-        var div3=document.createElement("div");
-        div3.setAttribute("class","div3");
-        var color = document.createElement("p");
-        color.textContent="Color";
-        var d1 = document.createElement("div");
-        var d2 = document.createElement("div");
-        div3.append(color,d1,d2);
-        div.append(img,name,div2,div3);
-        document.querySelector(".prod").append(div);
-        div.addEventListener("click",function(){
-          window.location.href=elem.link;
-        });
-      });
+      append(arr);
     }
   }
 
   var item = JSON.parse(localStorage.getItem("userdata"))
-  //   document.querySelector("#user_name").value = item.name
+  
   var login_boolean = JSON.parse(localStorage.getItem("login_boolean"))
   if (login_boolean) {
       document.getElementById("user_name").textContent = item.name
-  } else {
-      // <a href="" id="user_name">Sign In <i class="fas fa-user-circle"></i></a>
-  }
-  
-      //   function namesignin(element){
-      //   element.preventDefault();
-  
-      //   }
+  } 
