@@ -263,6 +263,9 @@ function productLists(products) {
 
         div2.append(mrp, price, dis)
         div.append(img, p, span, div2);
+        div.addEventListener("click",()=>{
+            window.location.href="product.html";
+        })
         document.querySelector(".trending").append(div);
     });
 }
